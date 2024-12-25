@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url("bg.jpg") no-repeat center/cover;
+    background-attachment: fixed;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .container {
+    position: relative;		
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 50px;
+}
+
+.navbar .brand {
+    color: #fff;
+}
+
+.navbar ul {
+    overflow-y: auto;
+    display: flex;
+    list-style: none;
+}
+
+.navbar ul li:not(:last-child) {
+    margin-right: 35px;
+}
+
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+}
+
+ul.megamenu {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    padding: 25px 50px;
+    transform-origin: top;
+    transform: scaleY(0);
+    visibility: hidden;
+    transition: .4s all ease;
+}
+
+ul.megamenu .megamenu-items {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff6e;
+}
+
+ul.megamenu .megamenu-items> li {
+    flex: 0 1 25%;
+    text-align: center;
+    margin-right: 0;
+    border-right: 1px solid #ffffff6e;
+}
+
+ul.megamenu .megamenu-items> li:first-child {
+    border-left: 1px solid #ffffff6e;
+}
+
+ul.megamenu li {
+    margin-right: 0;
+}
+
+.megamenu li a:not(.submenu a) {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: red !important;
+}
+
+.navbar ul li:hover a + .megamenu {
+    transform: scaleY(1);
+    visibility: visible;
+}
+
+ul.megamenu .submenu {
+    display: block;
+}
+
+ul.megamenu .submenu li {
+    margin: 15px 0;
+}
+
+ul.megamenu .submenu li a {
+    padding-bottom: 5px;
+    position: relative;
+}
+
+ul.megamenu .submenu li a::before {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background: red;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: .4s all ease-in-out;
+}
+
+ul.megamenu .submenu li a:hover::before {
+    transform: scaleX(1);
+}
+
+.color {
+    height: 12px;
+    width: 12px;
+    border: 1px solid #fff;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.black {
+    background-color: #000;
+}
+
+.red {
+    background-color: red;
+}
+
+.rblue {
+    background-color: blue;
+}
+
+.cblack {
+    background-color: #222;
+}
+
+.bando {
+    background: linear-gradient(black 50%, orange 50%);
+}
+
+.oandw {
+    background: linear-gradient(white 50%, orange 50%);
+}
+
+.gandb {
+    background: linear-gradient(green 50%, #000 50%);
+}
+
+.color-options {
+    display: block !important;
+}
+
+.color-options li .color {
+    margin-right: 7px;
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar .container {
+        padding: 0 25px;
+    }
+
+    .brand h2 {
+        font-size: 20px;
+    }
+
+    ul.megamenu {
+        top:70px;
+        padding: 25px;
+    }
+
+    .navbar ul li:not(:last-child) {
+        margin-right: 20px;
+    }
+
+    .navbar ul.megamenu li:not(:last-child) {
+        margin-right: 0;
+    }
+
+    ul.megamenu .megamenu-items> li {
+        flex: 0 1 100%;
+        border-left: 1px solid #ffffff6e;
+    }
+}
