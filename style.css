@@ -70,12 +70,11 @@ ul.megamenu .megamenu-items {
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    /* padding-top: 20px; */
     border-top: 1px solid #ffffff6e;
 }
 
 ul.megamenu .megamenu-items> li {
-    flex: 0 1 25%;
+    width: 25%;
     text-align: center;
     margin-right: 0;
     border-right: 1px solid #ffffff6e;
@@ -192,7 +191,6 @@ ul.megamenu .submenu li a:hover::before {
     }
 
     ul.megamenu {
-        top:70px;
         padding: 25px;
     }
 
@@ -205,7 +203,7 @@ ul.megamenu .submenu li a:hover::before {
     }
 
     ul.megamenu .megamenu-items> li {
-        flex: 0 1 100%;
+        width: 100%;
         border-left: 1px solid #ffffff6e;
     }
 }
