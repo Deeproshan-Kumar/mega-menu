@@ -70,7 +70,7 @@ ul.megamenu .megamenu-items {
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-between;
-    padding-top: 20px;
+    /* padding-top: 20px; */
     border-top: 1px solid #ffffff6e;
 }
 
@@ -90,6 +90,8 @@ ul.megamenu li {
 }
 
 .megamenu li a:not(.submenu a) {
+    display: block;
+    padding: 15px 15px 0;
     font-size: 16px;
     text-transform: uppercase;
     font-weight: bold;
@@ -102,7 +104,12 @@ ul.megamenu li {
 }
 
 ul.megamenu .submenu {
+    max-height: calc(100vh - 126px);
     display: block;
+}
+
+ul.megamenu .submenu::-webkit-scrollbar {
+    width: 0;
 }
 
 ul.megamenu .submenu li {
