@@ -190,6 +190,10 @@ ul.megamenu .submenu li a:hover::before {
         font-size: 20px;
     }
 
+    ul.megamenu .submenu {
+        max-height: unset;
+    }
+
     ul.megamenu {
         padding: 25px;
     }
@@ -205,5 +209,11 @@ ul.megamenu .submenu li a:hover::before {
     ul.megamenu .megamenu-items> li {
         width: 100%;
         border-left: 1px solid #ffffff6e;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    ul.megamenu {
+        top: 70px;
     }
 }
